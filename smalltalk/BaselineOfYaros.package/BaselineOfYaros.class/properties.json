@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfYaros",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfYaros",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

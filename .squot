@@ -1,3 +1,4 @@
 OrderedDictionary {
-	'smalltalk/Yaros.package' : #SquotCypressCodeSerializer
+	'smalltalk/Yaros.package' : #SquotCypressCodeSerializer,
+	'smalltalk/BaselineOfYaros.package' : #SquotCypressCodeSerializer
 }

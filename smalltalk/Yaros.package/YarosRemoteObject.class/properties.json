@@ -1,0 +1,15 @@
+{
+	"category" : "Yaros",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"server",
+		"id" ],
+	"name" : "YarosRemoteObject",
+	"pools" : [
+		 ],
+	"super" : "ProtoObject",
+	"type" : "normal" }

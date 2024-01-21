@@ -1,0 +1,4 @@
+proxies
+isProxy
+
+	^ true

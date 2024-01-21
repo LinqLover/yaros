@@ -1,0 +1,28 @@
+{
+	"category" : "Yaros",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"serverName",
+		"inputPort",
+		"outputPort",
+		"client",
+		"inputStream",
+		"outputStream",
+		"server",
+		"outputs",
+		"clientProcess",
+		"inputs",
+		"inputProcess",
+		"sharedObjects",
+		"remoteObjects",
+		"localObjects",
+		"queues" ],
+	"name" : "YarosServer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

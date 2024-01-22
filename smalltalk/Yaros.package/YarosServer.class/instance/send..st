@@ -4,6 +4,6 @@ send: json
 	Transcript showln: ('{1}: send: {2}' format: {self. json printString}).
 	
 	outputs nextPut: json asJsonString.
-	outputs nextPut: '{}'.
-	outputs nextPut: '{}'.
-	outputs nextPut: '{}'. "otherwise messages are send to late???"
+	outputs nextPut: '{}'. "http: otherwise messages are send to late???"
+	"outputs nextPut: '{}'.
+	outputs nextPut: '{}'." "chunks: otherwise messages are send to late???"

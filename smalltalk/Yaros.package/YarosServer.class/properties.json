@@ -10,7 +10,6 @@
 		"inputPort",
 		"outputPort",
 		"client",
-		"inputStream",
 		"outputStream",
 		"server",
 		"outputs",
@@ -20,7 +19,8 @@
 		"sharedObjects",
 		"remoteObjects",
 		"localObjects",
-		"queues" ],
+		"queues",
+		"serverProcess" ],
 	"name" : "YarosServer",
 	"pools" : [
 		 ],

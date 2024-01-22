@@ -12,5 +12,6 @@ handleInput: input
 	json type
 		caseOf:
 			{[#messageSend] -> [self "halt" handleMessageSend: (self parseMessageSend: json)].
-			[#answer] -> [self handleAnswer: (self parseAnswer: json)]}
+			[#answer] -> [self handleAnswer: (self parseAnswer: json)].
+			[#lookup] -> [self handleLookup: (self parseLookup: json)]}
 	

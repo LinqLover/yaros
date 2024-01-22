@@ -5,6 +5,6 @@ sendAnswer: answer
 	json := JsonObject new
 		type: #answer;
 		id: answer key;
-		object: answer value;
+		object: (self compileObject: answer value);
 		yourself.
 	^ self send: json

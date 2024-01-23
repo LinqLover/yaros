@@ -1,4 +1,4 @@
 *Yaros-converting
 asYarosJsonObjectWith: aServer
 
-	^ aServer jsonObjectForCharacter: self
+	^ aServer jsonObjectForDictionary: self

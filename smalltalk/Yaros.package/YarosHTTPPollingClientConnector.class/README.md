@@ -1,0 +1,1 @@
+I only use HTTP requests via WebClient, thus I work in a browser context. I support CORS as well. To be used together with a YarosHTTPPollingServerConnector on the server side.

@@ -1,7 +1,7 @@
 messaging
 send: json
 
-	Transcript showln: ('{1}: send: {2}' format: {self. json printString}).
+	self debugLog ifNotNil: [:log | log showln: ('{1}: send: {2}' format: {self. json printString})].
 	
 	outputs nextPut: json asJsonString.
 	self flag: #workaround. "otherwise messages are sent too late???"

@@ -1,10 +1,12 @@
 control
 startServerOn: outputStreamBlock
 
-	serverProcess := [outputStreamBlock value do: [:ea |
+	serverProcess := [| webClient |
+	webClient := self newWebClient.
+	outputStreamBlock value do: [:ea |
 		| response |
 		"Transcript showln: ('{1}: server about to post {2}' format: {self. ea})."
-		response := WebClient new
+		response := webClient
 			httpPost: self serverUrl
 			content: ea
 			type: 'application/json'.

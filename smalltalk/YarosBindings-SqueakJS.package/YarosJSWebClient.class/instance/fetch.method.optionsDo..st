@@ -1,15 +1,19 @@
 private
 fetch: urlString method: methodString optionsDo: optionsBlock
 
-	| code content headers numberOfHeaders rawHeaders response url |
-	response := JS await:
-		(JS
-			fetch: urlString
-			with:
-				(JS Object new
-					at: #method put: methodString;
-					in: optionsBlock;
-					yourself)).
+	| options response rawHeaders numberOfHeaders headers code url content |
+	options := JS Object new.
+	options at: #method put: methodString.
+	self timeout ifNotNil: [:seconds |
+		(JS eval: '(options, ms) => {
+			const ctrl = new AbortController();
+			setTimeout(() => ctrl.abort(), ms);
+			options.signal = ctrl.signal;
+		}') call: options with: seconds * 1000].
+		
+	options in: optionsBlock.
+	
+	response := JS await: (JS fetch: urlString with: options).
 	
 	rawHeaders := JS Array from: response headers.
 	numberOfHeaders := rawHeaders length - 1.
@@ -19,10 +23,9 @@ fetch: urlString method: methodString optionsDo: optionsBlock
 			rawHeader := rawHeaders at: i.
 			stream nextPut: (rawHeader at: 0) asString -> (rawHeader at: 1) asString]].
 	
-	content := (JS await: response text) asString.
-	
 	code := response status.
 	url := response url asString.
+	content := (JS await: response text) asString.
 	
 	^ WebResponse new
 		yarosHeaders: headers code: code;

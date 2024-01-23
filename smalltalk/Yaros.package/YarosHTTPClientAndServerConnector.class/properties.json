@@ -1,0 +1,15 @@
+{
+	"category" : "Yaros",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ct 1/23/2024 11:12",
+	"instvars" : [
+		"client",
+		"serverProcess" ],
+	"name" : "YarosHTTPClientAndServerConnector",
+	"pools" : [
+		 ],
+	"super" : "YarosNetworkConnector",
+	"type" : "normal" }

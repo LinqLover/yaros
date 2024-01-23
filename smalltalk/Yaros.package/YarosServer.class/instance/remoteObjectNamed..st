@@ -1,4 +1,4 @@
-as yet unclassified
+public
 remoteObjectNamed: aString
 
 	| id result |

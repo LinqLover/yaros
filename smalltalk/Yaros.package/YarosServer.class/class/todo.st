@@ -3,7 +3,6 @@ todo
 	"
 	network:
 	* chunk-based approach is horrible: eliminate workarounds in chunk writing, send correct headers, fix timeouts
-	* extract network protocol into separate class
 	* switch to websockets, or simple http calls for now
 	* fi
 	

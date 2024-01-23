@@ -1,4 +1,4 @@
-as yet unclassified
+messaging
 handleMessageSend: aMessageSend
 
 	"self halt: aMessageSend value selector."

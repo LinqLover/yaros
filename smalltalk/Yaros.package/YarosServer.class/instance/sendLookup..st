@@ -1,4 +1,4 @@
-as yet unclassified
+messaging
 sendLookup: aString
 
 	| json |

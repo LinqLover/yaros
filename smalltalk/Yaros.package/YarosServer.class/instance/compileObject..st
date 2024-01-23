@@ -1,4 +1,4 @@
-as yet unclassified
+compiling and parsing
 compileObject: anObject
 
 	^ anObject asYarosJsonObjectWith: self

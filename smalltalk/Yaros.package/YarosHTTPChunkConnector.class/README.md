@@ -1,0 +1,1 @@
+Faster than YarosHTTPClientAndServerConnector but hackier, exposes low-level sockets and abuses chunked encoding. Also buggy (times out frequently because we do not restart something properly).

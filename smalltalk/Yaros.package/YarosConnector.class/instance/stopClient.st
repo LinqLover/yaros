@@ -1,0 +1,4 @@
+control
+stopClient
+
+	^ self subclassResponsibility

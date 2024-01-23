@@ -1,4 +1,4 @@
-as yet unclassified
+compiling and parsing
 jsonObjectForObject: anObject
 
 	^ localObjects at: anObject ifAbsentPut:

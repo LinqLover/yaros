@@ -1,0 +1,1 @@
+Slower than YarosHTTPChunkConnector but more elegant and stable. Supports CORS.

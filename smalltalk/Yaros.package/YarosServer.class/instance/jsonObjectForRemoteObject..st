@@ -1,4 +1,4 @@
-as yet unclassified
+compiling and parsing
 jsonObjectForRemoteObject: aRemoteObject
 
 	^ JsonObject new

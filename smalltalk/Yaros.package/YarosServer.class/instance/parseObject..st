@@ -1,4 +1,4 @@
-as yet unclassified
+compiling and parsing
 parseObject: json
 
 	json isDictionary ifTrue:

@@ -1,10 +1,10 @@
-as yet unclassified
-startChunkServer
+control
+startServerOn: outputStreamBlock
 
 	server := WebServer new.
-	server listenOn: self outputPort.
+	server listenOn: self clientPort.
 	server addService: '/comm' action: [:req |
-		| response gen |
+		| response outputStream gen |
 		[:exit | req
 			send200Response: (('0', String crlf ", String crlf") convertToWithConverter: UTF8TextConverter new)
 			contentType: 'text/plain; charset=utf-8'
@@ -16,10 +16,11 @@ startChunkServer
 				req stream flush."
 				exit value]] valueWithExit.
 		Transcript showln: ('{1}: server opened' format: {self}).
-		self send: 'hi'.
+		unblockServerBlock value.
+		outputStream := outputStreamBlock value.
 		gen := Generator on: [:g | | msg |
 			g nextPut: String crlf. "is always ignored???"
-			self outputStream do: [:ea |
+			outputStream do: [:ea |
 				g nextPut: ea , String cr]].
 		gen do: [:msg | | rawmsg |
 			"Transcript showln: ('{1}: send: {2}' format: {self. msg})."

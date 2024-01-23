@@ -1,14 +1,8 @@
-as yet unclassified
+control
 stopClient
 
-	client ifNotNil:
-		[(client respondsTo: #close)
-			ifTrue: [client close]
-			ifFalse: [client destroy].
-		client := nil].
-	clientProcess ifNotNil:
-		[clientProcess terminate.
-		clientProcess := nil].
+	self connector stopClient.
+	
 	inputProcess ifNotNil:
 		[inputProcess terminate.
 		inputProcess := nil].

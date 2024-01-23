@@ -1,0 +1,14 @@
+{
+	"category" : "Yaros",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "YarosConnector",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

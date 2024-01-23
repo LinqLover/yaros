@@ -1,0 +1,4 @@
+control
+stopServer
+
+	^ self subclassResponsibility

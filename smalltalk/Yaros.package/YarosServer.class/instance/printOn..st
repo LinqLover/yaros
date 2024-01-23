@@ -1,12 +1,9 @@
-as yet unclassified
+printing
 printOn: aStream
 
 	super printOn: aStream.
 	
 	aStream
-		space;
-		nextPutAll: self serverName;
-		space;
-		print: self inputPort;
-		nextPut: $/;
-		print: self outputPort.
+		nextPut: $(;
+		print: self connector;
+		nextPut: $).

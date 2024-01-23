@@ -1,10 +1,10 @@
-as yet unclassified
-startHTTPServer
+control
+startServerOn: outputStreamBlock
 
-	serverProcess := [self outputStream do: [:ea |
+	serverProcess := [outputStreamBlock value do: [:ea |
 		| response |
 		response := WebClient new
-			httpPost: self outputUrl
+			httpPost: self serverUrl
 			content: ea
 			type: 'application/json'.
 		self assert: response isSuccess]]

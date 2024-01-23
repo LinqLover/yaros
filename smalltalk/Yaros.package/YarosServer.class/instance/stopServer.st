@@ -1,9 +1,4 @@
-as yet unclassified
+control
 stopServer
 
-	server ifNotNil:
-		[server destroy.
-		server := nil].
-	serverProcess ifNotNil:
-		[serverProcess terminate.
-		serverProcess := nil].
+	self connector stopServer.

@@ -1,4 +1,4 @@
-as yet unclassified
+compiling and parsing
 parseLookup: json
 
 	| id name |

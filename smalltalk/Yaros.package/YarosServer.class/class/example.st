@@ -3,12 +3,16 @@ example
 
 	"image 1:"
 	| yaros1 yaros2 |
-	yaros1 := YarosServer serverName: 'localhost' inputPort: 8082 outputPort: 8083.
+	yaros1 := YarosServer new
+		connector: (YarosHTTPClientAndServerConnector remoteName: 'localhost' clientPort: 8082 serverPort: 8083);
+	yourself.
 	yaros1 startServer.
 	yaros1 startClient.
 	
 	"image 2:"
-	yaros2 := YarosServer serverName: 'localhost' inputPort: 8083 outputPort: 8082.
+	yaros2 := YarosServer new
+		connector: (YarosHTTPClientAndServerConnector remoteName: 'localhost' clientPort: 8083 serverPort: 8082);
+		yourself.
 	yaros2 startServer.
 	yaros2 startClient.
 	

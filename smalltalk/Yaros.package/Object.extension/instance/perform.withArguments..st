@@ -7,5 +7,5 @@ perform: selector withArguments: argArray
 
 	<primitive: 84>
 	selector isProxy ifTrue: [^ self perform: selector resolveProxy withArguments: argArray].
-	argArray isProxy ifTrue: [^ self perform: selector withArguments: argArray resolveProxy].
+	argArray isProxy ifTrue: [^ self perform: selector withArguments: argArray resolveProxyArray].
 	^ self perform: selector withArguments: argArray inSuperclass: self class

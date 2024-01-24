@@ -1,0 +1,14 @@
+{
+	"category" : "YarosBindings-SqueakJS",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "YarosJSSyncWebClient",
+	"pools" : [
+		 ],
+	"super" : "YarosJSWebClient",
+	"type" : "normal" }

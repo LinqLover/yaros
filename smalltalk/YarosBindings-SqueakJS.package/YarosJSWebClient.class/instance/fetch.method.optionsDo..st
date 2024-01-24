@@ -29,7 +29,7 @@ fetch: urlString method: methodString optionsDo: optionsBlock
 	
 	^ WebResponse new
 		yarosHeaders: headers code: code;
-		url: urlString;
+		url: url;
 		status: 'HTTP/1.1 ' "faked" , code; "for printString"
 		content: content;
 		yourself

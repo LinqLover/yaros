@@ -21,7 +21,7 @@ startServerOn: outputStreamBlock
 		gen := Generator on: [:g | | msg |
 			g nextPut: String crlf. "is always ignored???"
 			outputStream do: [:ea |
-				g nextPut: ea , String cr]].
+				g nextPut: (ea ifNil: ['{}']) , String cr]].
 		gen do: [:msg | | rawmsg |
 			"Transcript showln: ('{1}: send: {2}' format: {self. msg})."
 			rawmsg := ((((msg size printStringBase: 16) , String crlf , msg , String crlf ", '0' , String crlf"))).

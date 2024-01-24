@@ -12,7 +12,7 @@ startServerOn: outputStreamBlock
 			"Transcript showln: ('{1}: server got {2}' format: {self. req})."
 			content := req isOptionsRequest
 				ifTrue: ['ok']
-				ifFalse: [(outputStream ifNil: [outputStream := outputStreamBlock value]) next].
+				ifFalse: [[(outputStream ifNil: [outputStream := outputStreamBlock value]) next] whileNil].
 			"Transcript showln: ('{1}: server about to respond {2}' format: {self. content})."
 			req send200Response: content contentType: 'text/plain' do: [:res |
 				res headerAt: 'Access-Control-Allow-Origin' put: '*'.

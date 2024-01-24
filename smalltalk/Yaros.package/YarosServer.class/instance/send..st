@@ -5,7 +5,7 @@ send: json
 	
 	outputs nextPut: json asJsonString.
 	self flag: #workaround. "otherwise messages are sent too late???"
-	outputs nextPut: '{}'.
+	outputs nextPut: nil.
 	(self connector isKindOf: YarosHTTPChunkConnector) ifTrue:
 		[self flag: #workaround. "otherwise messages are sent too late???"
 		outputs nextPut: '{}'.

@@ -7,7 +7,7 @@ baseline: spec
 		spec baseline: 'SqueakJS' with:
 			[spec
 				loads: 'JSBridge-Core';
-				repository: 'github://codefrau/SqueakJS:main/utils'].
+				repository: 'github://LinqLover/SqueakJS:stream--jaros/utils'].
 		
 		"packages"
 		spec package: 'Yaros'.

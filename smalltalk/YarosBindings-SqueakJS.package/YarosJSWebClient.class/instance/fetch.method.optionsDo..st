@@ -13,7 +13,7 @@ fetch: urlString method: methodString optionsDo: optionsBlock
 		
 	options in: optionsBlock.
 	
-	response := JS await: (JS fetch: urlString with: options).
+	response := (JS fetch: urlString with: options) asSqueakPromise await.
 	
 	rawHeaders := JS Array from: response headers.
 	numberOfHeaders := rawHeaders length - 1.
@@ -25,7 +25,7 @@ fetch: urlString method: methodString optionsDo: optionsBlock
 	
 	code := response status.
 	url := response url asString.
-	content := (JS await: response text) asString.
+	content := response text asSqueakPromise await asString.
 	
 	^ WebResponse new
 		yarosHeaders: headers code: code;

@@ -1,0 +1,14 @@
+{
+	"category" : "YarosBindings-SqueakJS-Await",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"promise" ],
+	"name" : "PromiseAwait",
+	"pools" : [
+		 ],
+	"super" : "Exception",
+	"type" : "normal" }

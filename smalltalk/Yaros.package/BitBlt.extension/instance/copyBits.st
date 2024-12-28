@@ -46,6 +46,9 @@ copyBits
 		[colorMap := colorMap colors.
 		^self copyBits].
 	
+	sourceForm isProxy ifTrue:
+		[sourceForm := sourceForm resolveProxyForm.
+		^ self copyBits].
 	halftoneForm isProxy ifTrue:
 		[halftoneForm := halftoneForm resolveProxyColor.
 		^self copyBits].

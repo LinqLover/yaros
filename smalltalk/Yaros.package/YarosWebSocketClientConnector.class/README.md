@@ -1,0 +1,1 @@
+Uses a WebSocket client and arguably the most idiomatic and fastest network connector. Perhaps some requests suffer from extremely high latencies or lock forever, needs to be reproduced.

@@ -1,0 +1,8 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"startClientFrom:" : "ct 12/2/2024 01:38",
+		"startServerOn:" : "ct 12/2/2024 01:38",
+		"stopClient" : "ct 12/2/2024 01:40",
+		"stopServer" : "ct 12/2/2024 01:40" } }

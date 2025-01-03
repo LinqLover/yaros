@@ -52,6 +52,9 @@ copyBits
 	halftoneForm isProxy ifTrue:
 		[halftoneForm := halftoneForm resolveProxyColor.
 		^self copyBits].
+	colorMap isProxy ifTrue:
+		[colorMap := colorMap resolveColorMap.
+		^self copyBits].
 	
 	"Check if clipping got way out of range"
 	self clipRange.

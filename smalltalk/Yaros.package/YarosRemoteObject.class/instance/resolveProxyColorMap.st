@@ -1,5 +1,5 @@
 proxies
-resolveColorMap
+resolveProxyColorMap
 
 	| data |
 	nil haltIf: (self isKindOf: Bitmap) not.

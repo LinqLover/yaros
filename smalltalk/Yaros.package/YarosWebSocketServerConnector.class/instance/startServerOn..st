@@ -7,4 +7,4 @@ startServerOn: outputStreamBlock
 				[mutex critical:
 					[sockets do: [:socket |
 						socket  send: ea]]]]]
-			forkAt: 30.
+			forkAt: 30 named: ('{1}''s server' format: {self}).

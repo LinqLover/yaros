@@ -4,12 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ct 1/3/2025 20:54",
+	"commentStamp" : "ct 1/5/2025 21:34",
 	"instvars" : [
 		"webSocket",
 		"serverProcess" ],
 	"name" : "YarosWebSocketClientConnector",
 	"pools" : [
 		 ],
-	"super" : "YarosNetworkConnector",
+	"super" : "YarosWebSocketConnector",
 	"type" : "normal" }

@@ -6,14 +6,5 @@ startClientFrom: inputStream
 	sockets := OrderedCollection new.
 	webServer
 		addService: '/comm'
-		action: [:req |
-			| socket |
-			socket := req asWebSocket.
-			socket timeout: 5 minutes asSeconds.
-			socket onMessage: [:data |
-				inputStream nextPut: data].
-			socket onClose:
-				[mutex critical: [sockets remove: socket]].
-			mutex critical: [sockets add: socket].
-			socket run].
+		action: [:request | self runWebSocketFor: request from: inputStream].
 	webServer listenOn: self clientPort.

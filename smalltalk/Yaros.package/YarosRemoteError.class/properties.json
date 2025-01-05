@@ -1,0 +1,15 @@
+{
+	"category" : "Yaros",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"exception",
+		"stack" ],
+	"name" : "YarosRemoteError",
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }

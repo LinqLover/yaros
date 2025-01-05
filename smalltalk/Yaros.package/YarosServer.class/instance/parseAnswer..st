@@ -1,7 +1,8 @@
 compiling and parsing
 parseAnswer: json
 
-	| id object |
+	| id result error |
 	id := json id.
-	object := self parseObject: json object.
-	^ id -> object
+	error := self parseObject: (json at: #error).
+	result := self parseObject: json result.
+	^ id -> {error. result}

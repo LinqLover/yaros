@@ -1,0 +1,14 @@
+{
+	"category" : "Yaros",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name" ],
+	"name" : "YarosLookupMessage",
+	"pools" : [
+		 ],
+	"super" : "YarosMessage",
+	"type" : "normal" }

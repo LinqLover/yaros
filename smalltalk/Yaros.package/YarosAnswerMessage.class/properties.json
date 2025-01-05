@@ -1,0 +1,16 @@
+{
+	"category" : "Yaros",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"message",
+		"result",
+		"error" ],
+	"name" : "YarosAnswerMessage",
+	"pools" : [
+		 ],
+	"super" : "YarosMessage",
+	"type" : "normal" }

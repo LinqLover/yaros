@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"newFor:server:" : "ct 1/5/2025 22:13",
+		"type" : "ct 1/5/2025 22:08" },
+	"instance" : {
+		"asJsonFor:" : "ct 1/5/2025 22:07",
+		"handleWith:" : "ct 1/5/2025 23:48",
+		"initializeFromJson:for:" : "ct 1/5/2025 22:20",
+		"messageSend" : "ct 1/5/2025 22:08",
+		"messageSend:" : "ct 1/5/2025 22:15" } }

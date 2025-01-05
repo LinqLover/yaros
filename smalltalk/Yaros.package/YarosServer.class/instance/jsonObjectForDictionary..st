@@ -1,6 +1,6 @@
-compiling and parsing
+object conversion
 jsonObjectForDictionary: aDictionary
 
 	^ JsonObject new
-		dictionary: (self compileObject: aDictionary);
+		dictionary: (self jsonForObject: aDictionary);
 		yourself

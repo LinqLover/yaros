@@ -1,4 +1,4 @@
-compiling and parsing
+object conversion
 jsonObjectForRemoteObject: aRemoteObject
 
 	^ JsonObject new

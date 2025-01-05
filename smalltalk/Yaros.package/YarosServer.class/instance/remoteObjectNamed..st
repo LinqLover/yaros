@@ -1,9 +1,9 @@
 public
 remoteObjectNamed: aString
 
-	| id errorAndResult |
-	id := self sendLookup: aString.
-	errorAndResult := (queues at: id put: SharedQueue new) next.
+	| message answer |
+	message := self sendLookup: aString.
+	answer := (queues at: message id put: SharedQueue new) next.
 	self flag: #todo. "thread-safe!"
-	queues removeKey: id.
-	^ errorAndResult second
+	queues removeKey: message id.
+	^ answer result

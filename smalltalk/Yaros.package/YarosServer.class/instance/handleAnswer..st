@@ -1,4 +1,4 @@
-messaging
-handleAnswer: answer
+message dispatch
+handleAnswer: anAnswerMessage
 
-	(queues at: answer key) nextPut: answer value.
+	(queues at: anAnswerMessage id) nextPut: anAnswerMessage.

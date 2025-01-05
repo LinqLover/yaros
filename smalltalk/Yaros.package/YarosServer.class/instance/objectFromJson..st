@@ -1,5 +1,5 @@
-compiling and parsing
-parseObject: json
+object conversion
+objectFromJson: json
 
 	json isDictionary ifTrue:
 		[| id |

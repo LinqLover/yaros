@@ -1,6 +1,10 @@
-messaging
-send: json
+private
+send: aMessage
 
+	| json |
+	json := (aMessage isKindOf: YarosMessage)
+		ifTrue: [aMessage asJsonFor: self]
+		ifFalse: [aMessage "legacy"].
 	self debugLog ifNotNil: [:log | log showln: ('{1}: send: {2}' format: {self. json printString})].
 	
 	outputs nextPut: json asJsonString.
@@ -10,3 +14,5 @@ send: json
 		[self flag: #workaround. "otherwise messages are sent too late???"
 		outputs nextPut: '{}'.
 		outputs nextPut: '{}'].
+	
+	^ aMessage

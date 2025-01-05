@@ -1,7 +1,5 @@
 messaging
-sendLookup: aString
+sendLookup: name
 
-	| json |
-	json := self compileLookup: aString.
-	self send: json.
-	^ json id
+	^ self send:
+		(YarosLookupMessage newFor: name server: self)

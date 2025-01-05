@@ -1,4 +1,4 @@
-compiling and parsing
+object conversion
 jsonObjectForObject: anObject
 
 	^ localObjects at: anObject ifAbsentPut:

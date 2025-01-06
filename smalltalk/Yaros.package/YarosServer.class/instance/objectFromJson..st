@@ -3,7 +3,6 @@ objectFromJson: json
 
 	json isDictionary ifTrue:
 		[| id |
-		json dictionary ifNotNil: [:dictionary | ^ dictionary].
 		json symbol ifNotNil: [:symbol | ^ symbol asSymbol].
 		json character ifNotNil: [:character | ^ character first].
 		id := json id.

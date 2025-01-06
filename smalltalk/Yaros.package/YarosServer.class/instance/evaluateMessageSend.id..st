@@ -1,5 +1,5 @@
 message dispatch
-evaluateMessageSend: aMessageSend
+evaluateMessageSend: aMessageSend id: id
 
 	| promise |
 	promise := Promise new.
@@ -11,6 +11,6 @@ evaluateMessageSend: aMessageSend
 	error
 		ifNil: [promise resolveWith: result]
 		ifNotNil: [promise rejectWith: error]]
-			fork.
+			forkAt: 29 named: ('Yaros message {1}' format: {id}).
 	
 	^ promise

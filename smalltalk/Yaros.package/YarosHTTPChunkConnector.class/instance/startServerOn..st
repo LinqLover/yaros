@@ -16,7 +16,7 @@ startServerOn: outputStreamBlock
 				req stream flush."
 				exit value]] valueWithExit.
 		Transcript showln: ('{1}: server opened' format: {self}).
-		unblockServerBlock value.
+		self unblockServerBlock value.
 		outputStream := outputStreamBlock value.
 		gen := Generator on: [:g | | msg |
 			g nextPut: String crlf. "is always ignored???"

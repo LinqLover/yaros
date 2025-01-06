@@ -10,3 +10,4 @@ initialize
 	sharedObjects := Dictionary new.
 	remoteObjects := Dictionary new.
 	queues := Dictionary new.
+	serverRunning := false.

@@ -7,3 +7,4 @@ startServer
 	self connector startServerOn:
 		[Generator on: [:gen |
 			[gen nextPut: outputs next] repeat]].
+	serverRunning := true.

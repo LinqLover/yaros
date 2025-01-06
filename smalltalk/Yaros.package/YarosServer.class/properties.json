@@ -14,7 +14,8 @@
 		"inputs",
 		"outputs",
 		"inputProcess",
-		"queues" ],
+		"queues",
+		"serverRunning" ],
 	"name" : "YarosServer",
 	"pools" : [
 		 ],

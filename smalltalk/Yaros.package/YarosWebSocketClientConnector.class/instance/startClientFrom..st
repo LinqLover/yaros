@@ -12,6 +12,7 @@ startClientFrom: inputStream
 	webSocket onClose:
 		[pingProcess terminate.
 		webSocket := nil.
+		self stopClient.
 		self triggerEvent: #clientStopped].
 	
 	[webSocket run] forkAt: 30 named: ('{1}''s client' format: {self}).

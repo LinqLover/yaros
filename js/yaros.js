@@ -6,7 +6,7 @@ globalThis.tiktoken = tiktoken
 globalThis.gptTokenizer = gptTokenizer */
 
 /**
- * TODOS: ugly prototype by ChatGPT. Refactor. Be more systematical about proxy resolution, smalltalk protocol, and many other things.
+ * TODOS: ugly prototype by ChatGPT. Refactor. Be more systematical about proxy resolution, smalltalk protocol, string conversion (util?), and many other things.
  */
 
 
@@ -329,7 +329,12 @@ export class YarosServer {
             if (Array.isArray(receiverObj)) {
               return `[${(receiverObj.map(x => x.proxyToken !== undefined ? x.printString() : x))}]`
             }
-            return receiverObj.toString()
+            try {
+              return `${receiverObj}`
+            } catch (_) {
+              // e.g., modules
+              return `(${Object.prototype.toString(receiverObj)})`
+            }
           },
           'printOn:': async (stream) => {
             return stream.nextPutAll((receiverObj?.printString ? await receiverObj.printString() : smalltalkFns.printString(receiverObj)))

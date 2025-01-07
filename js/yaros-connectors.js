@@ -13,10 +13,11 @@ export class YarosWebSocketServerConnector extends YarosWebSocketConnector {
     console.log(`Starting YarosWebSocketServerConnector on port ${this.port} ...`)
     this.sockets = []
 
+	const route = new URLPattern({ pathname: '/comm' })
     this.server = Deno.serve({
       port: this.port,
       handler: (request) => {
-		if (request.url !== '/comm') {
+		if (!route.exec(request.url)) {
 		  return new Response("Not found\n", { status: 404 })
 		}
         const upgradeHeader = request.headers.get('upgrade') || ''

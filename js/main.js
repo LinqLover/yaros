@@ -3,8 +3,8 @@ import { YarosWebSocketClientConnector, YarosWebSocketServerConnector } from './
 
 async function main() {
   // Choose one
-  //const connector = new YarosWebSocketServerConnector(8082)
-  const connector = new YarosWebSocketClientConnector("http://localhost:8082")
+  const connector = new YarosWebSocketServerConnector(8082)
+  //const connector = new YarosWebSocketClientConnector("http://localhost:8082")
 
   // 1) Start the server
   const server = new YarosServer(connector)

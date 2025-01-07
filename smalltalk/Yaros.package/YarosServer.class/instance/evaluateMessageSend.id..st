@@ -7,7 +7,7 @@ evaluateMessageSend: aMessageSend id: id
 	[| result error |
 	result := [aMessageSend value]
 		on: Error , Warning ", Halt"
-		do: [:ex | error := {ex. ex signalerContext stack}].
+		do: [:ex | error := {ex. ex currentStack}].
 	error
 		ifNil: [promise resolveWith: result]
 		ifNotNil: [promise rejectWith: error]]

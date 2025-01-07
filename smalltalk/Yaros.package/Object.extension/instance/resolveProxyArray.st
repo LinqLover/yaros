@@ -2,4 +2,4 @@
 resolveProxyArray
 
 	^ (Array new: self size)
-		fillFrom: self with: #yourself
+		fillFrom: self with: [:ea | ea]

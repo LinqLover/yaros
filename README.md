@@ -2,6 +2,8 @@
 
 ## Installation
 
+### Squeak
+
 ```smalltalk
 Metacello new
 	baseline: 'Yaros';
@@ -9,3 +11,10 @@ Metacello new
 	get; "for updates"
 	load.
 ```
+
+## JavaScript
+
+Install [Deno](https://deno.land/).
+
+```bash
+

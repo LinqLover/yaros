@@ -19,6 +19,8 @@ async function main() {
   //await connector.waitForClient()
   const smalltalkRemote = await server.remoteObject("Smalltalk")
   console.log(await smalltalkRemote.imageName())
+
+  console.log(await (await (await (await server.remoteObject('Compiler')).evaluate('#(1 2 3)')).collect(x => x * 10)).asJsonString())
 }
 
 main().catch(console.error);

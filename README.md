@@ -12,9 +12,12 @@ Metacello new
 	load.
 ```
 
+See examples on class side of `YarosServer`.
+
 ## JavaScript
 
 Install [Deno](https://deno.land/).
 
 ```bash
-
+deno run --allow-net js/main.js
+```

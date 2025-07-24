@@ -1,0 +1,14 @@
+{
+	"category" : "YarosBindings-JavaScript-Support",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"isClosed" ],
+	"name" : "ClosableSharedQueue2",
+	"pools" : [
+		 ],
+	"super" : "SharedQueue2",
+	"type" : "normal" }

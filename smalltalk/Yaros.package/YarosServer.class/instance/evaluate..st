@@ -2,7 +2,7 @@ public
 evaluate: aMessageSend
 
 	| queue message answer |
-	serverRunning ifFalse: [self error: 'server not running'].
+	self isRunning ifFalse: [self error: 'server not running'].
 	
 	message := self newMessageSendMessageFor: aMessageSend.
 	queue := queues at: message id put: SharedQueue new.

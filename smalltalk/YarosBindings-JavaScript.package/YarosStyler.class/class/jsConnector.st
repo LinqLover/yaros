@@ -1,0 +1,4 @@
+private
+jsConnector
+
+	^ JsConnector

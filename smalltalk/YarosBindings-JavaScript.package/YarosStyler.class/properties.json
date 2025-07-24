@@ -1,0 +1,15 @@
+{
+	"category" : "YarosBindings-JavaScript",
+	"classinstvars" : [
+		"rangesBlock" ],
+	"classvars" : [
+		"JsConnector",
+		"UseStyler" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"rangesBlock" ],
+	"name" : "YarosStyler",
+	"pools" : [
+		 ],
+	"super" : "SHTextStyler",
+	"type" : "normal" }

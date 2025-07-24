@@ -1,0 +1,14 @@
+{
+	"category" : "YarosBindings-JavaScript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "YarosJSStyler",
+	"pools" : [
+		 ],
+	"super" : "YarosStyler",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "YarosBindings-JavaScript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "YarosJSRemoteObject",
+	"pools" : [
+		 ],
+	"super" : "YarosRemoteObject",
+	"type" : "normal" }

@@ -1,0 +1,42 @@
+GSMetadata {
+	#version : 1,
+	#mappers : [
+		GSCypressMapper {
+			#version : 1,
+			#package : MCPackage {
+				#name : 'Yaros'
+			},
+			#path : FSAbsolutePath [
+				'smalltalk'
+			]
+		},
+		GSCypressMapper {
+			#version : 1,
+			#package : MCPackage {
+				#name : 'BaselineOfYaros'
+			},
+			#path : FSAbsolutePath [
+				'smalltalk'
+			]
+		},
+		GSCypressMapper {
+			#version : 1,
+			#package : MCPackage {
+				#name : 'YarosBindings-JavaScript'
+			},
+			#path : FSAbsolutePath [
+				'smalltalk'
+			]
+		},
+		GSCypressMapper {
+			#version : 1,
+			#package : MCPackage {
+				#name : 'YarosBindings-SqueakJS'
+			},
+			#path : FSAbsolutePath [
+				'smalltalk'
+			]
+		}
+	],
+	#name : 'yaros'
+}

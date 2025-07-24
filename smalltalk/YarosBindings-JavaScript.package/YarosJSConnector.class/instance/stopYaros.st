@@ -1,0 +1,4 @@
+private
+stopYaros
+
+	yaros stop.

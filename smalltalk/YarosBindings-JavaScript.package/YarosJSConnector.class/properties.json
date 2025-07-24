@@ -1,0 +1,21 @@
+{
+	"category" : "YarosBindings-JavaScript",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Default",
+		"DefaultServerDirectory",
+		"PendingRestart" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"serverDirectory",
+		"serverPort",
+		"yaros",
+		"jsProcess",
+		"actualServerPort" ],
+	"name" : "YarosJSConnector",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,5 +1,0 @@
-OrderedDictionary {
-	'smalltalk/BaselineOfYaros.package' : #SquotCypressCodeSerializer,
-	'smalltalk/Yaros.package' : #SquotCypressCodeSerializer,
-	'smalltalk/YarosBindings-SqueakJS.package' : #SquotCypressCodeSerializer
-}

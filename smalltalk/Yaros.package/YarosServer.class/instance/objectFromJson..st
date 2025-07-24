@@ -7,6 +7,6 @@ objectFromJson: json
 		json character ifNotNil: [:character | ^ character first].
 		id := json id.
 		^ sharedObjects at: id ifAbsent:
-			[YarosRemoteObject server: self id: id]].
+			[self remoteObjectClass server: self id: id]].
 	
 	^ json

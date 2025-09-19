@@ -128,7 +128,11 @@ export class YarosServer {
     if (t === 'symbol') {
       return { symbol: value.description }
     }
-
+    
+    if (value.proxyToken) {
+      return { remoteId: value.yarosId }
+    }
+  
     const id = this._getOrMakeIdFor(value);
     if (id == null) {
       console.error("is this ever called???")
@@ -155,16 +159,16 @@ export class YarosServer {
       return Symbol.for(yarosValue.symbol);
     }
 
+    if ('remoteId' in yarosValue) {
+      return this._sharedObjects.get(yarosValue.remoteId)
+    }
+
     if (!('id' in yarosValue)) {
       // plain object
       return yarosValue
     }
 
     const id = yarosValue.id
-    if (this._sharedObjects.has(id)) {
-      const realObj = this._sharedObjects.get(id)
-      return realObj
-    }
     // create proxy
     if (!this._remoteObjects.has(id)) {
       this._remoteObjects.set(id, this._makeProxy(id))
@@ -174,10 +178,13 @@ export class YarosServer {
 
   _makeProxy(id) {
     const server = this
-      return new Proxy({}, {
+    return new Proxy({}, {
       get(_target, propKey) {
         if (propKey === 'proxyToken') {
           return this;
+        }
+        if (propKey === 'yarosId') {
+          return id;
         }
         if (propKey === 'then') {
           return undefined;
@@ -195,7 +202,7 @@ export class YarosServer {
           }
           const message = {
             type: 'messageSend',
-            receiver: { id },
+            receiver: { remoteId: id },
             selector: selector,
             arguments: args.map(server._asYarosJsonObject.bind(server)),
           }

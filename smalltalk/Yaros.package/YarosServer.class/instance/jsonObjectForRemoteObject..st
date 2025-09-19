@@ -2,5 +2,5 @@ object conversion
 jsonObjectForRemoteObject: aRemoteObject
 
 	^ JsonObject new
-		id: aRemoteObject xxxId;
+		remoteId: aRemoteObject xxxId;
 		yourself

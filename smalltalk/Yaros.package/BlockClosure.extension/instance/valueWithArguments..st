@@ -5,7 +5,7 @@ valueWithArguments: anArray
 	 message. Supply the arguments in an anArray and copied values to
 	 the activation as its arguments and copied temps. Primitive. Essential."
 	<primitive: 206>
-	anArray isProxy ifTrue: [^ self valueWithArguments: anArray resolveProxyArray].
+	anArray isProxy ifTrue: [^ self valueWithArguments: anArray resolveProxy].
 	numArgs ~= anArray size ifTrue:
 		[self numArgsError: anArray size].
 	^self primitiveFailed

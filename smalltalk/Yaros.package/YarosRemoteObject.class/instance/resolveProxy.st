@@ -1,4 +1,4 @@
 proxies
 resolveProxy
 
-	^ self yourself
+	^ (Smalltalk classNamed: (self perform: #class) name) yarosDeserialize: self yarosSerialize

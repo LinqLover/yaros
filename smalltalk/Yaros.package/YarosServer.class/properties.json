@@ -8,6 +8,7 @@
 	"instvars" : [
 		"name",
 		"connector",
+		"environment",
 		"debugLog",
 		"localObjects",
 		"sharedObjects",
@@ -16,7 +17,8 @@
 		"inputProcess",
 		"queues",
 		"serverRunning",
-		"remoteObjectClass" ],
+		"remoteObjectClass",
+		"remoteObjects" ],
 	"name" : "YarosServer",
 	"pools" : [
 		 ],

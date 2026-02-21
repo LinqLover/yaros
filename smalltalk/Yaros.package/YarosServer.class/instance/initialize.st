@@ -3,6 +3,8 @@ initialize
 
 	super initialize.
 	
+	self environment: self class environment.
+	
 	inputs := SharedQueue new.
 	outputs := SharedQueue new.
 	

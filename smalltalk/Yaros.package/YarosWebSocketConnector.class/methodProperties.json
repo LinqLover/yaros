@@ -1,5 +1,5 @@
 {
 	"class" : {
-		 },
+		"remoteName:port:" : "ct 2/13/2026 20:01" },
 	"instance" : {
 		"startPingPongOn:named:" : "ct 1/5/2025 21:26" } }

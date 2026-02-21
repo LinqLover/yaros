@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"remoteName:port:" : "ct 2/16/2026 20:30" },
 	"instance" : {
 		"runWebSocketFor:from:" : "ct 1/5/2025 21:28",
 		"startClientFrom:" : "ct 1/5/2025 21:15",

@@ -7,3 +7,5 @@ stopClient
 	inputProcess ifNotNil:
 		[inputProcess terminate.
 		inputProcess := nil].
+	
+	self triggerEvent: #disconnected.

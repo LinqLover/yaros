@@ -9,7 +9,7 @@ evaluateMessageSend: aMessageSend id: id
 		on: Error , Warning ", Halt"
 		do: [:ex | error := {ex. ex currentStack}].
 	error
-		ifNil: [promise resolveWith: result]
+		ifNil: [promise resolveWithValue: result]
 		ifNotNil: [promise rejectWith: error]]
 			forkAt: 29 named: ('Yaros message {1}' format: {id}).
 	

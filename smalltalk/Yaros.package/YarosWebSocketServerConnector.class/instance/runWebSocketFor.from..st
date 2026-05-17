@@ -9,7 +9,7 @@ runWebSocketFor: aWebRequest from: inputStream
 	mutex critical:
 		[sockets add: socket].
 	pingProcess := self startPingPongOn: socket named:
-		('{1}''s heartbeat for {2}' format: {self. socket}).
+		('{1}''s heartbeat for {2}' format: {self shortPrintString. socket}).
 	
 	socket onClose:
 		[mutex critical:

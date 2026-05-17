@@ -2,6 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
+		"shortPrintOn:" : "ct 10/9/2025 18:05",
+		"shortPrintString" : "ct 10/9/2025 18:04",
 		"startClientFrom:" : "ct 1/23/2024 10:30",
 		"startServerOn:" : "ct 1/23/2024 11:09",
 		"stopClient" : "ct 1/23/2024 10:34",

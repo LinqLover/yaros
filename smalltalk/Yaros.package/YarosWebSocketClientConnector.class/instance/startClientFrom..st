@@ -7,7 +7,7 @@ startClientFrom: inputStream
 		inputStream nextPut: data].
 	
 	pingProcess := self startPingPongOn: webSocket named:
-		('{1}''s heartbeat' format: {self}).
+		('{1}''s heartbeat' format: {self shortPrintString}).
 	
 	webSocket onClose:
 		[pingProcess terminate.
@@ -15,4 +15,4 @@ startClientFrom: inputStream
 		self stopClient.
 		self triggerEvent: #clientStopped].
 	
-	[webSocket run] forkAt: 30 named: ('{1}''s client' format: {self}).
+	[webSocket run] forkAt: 30 named: ('{1}''s client' format: {self shortPrintString}).

@@ -5,5 +5,5 @@ printOn: aStream
 	
 	aStream
 		nextPut: $(;
-		nextPutAll: (self name ifNil: [self connector printString]);
+		nextPutAll: (self name ifNil: [self connector shortPrintString]);
 		nextPut: $).

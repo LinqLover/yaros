@@ -123,6 +123,11 @@ export class YarosServer {
     if (value === null || value === undefined) return null;
     const t = typeof value;
     if (t === 'string' || t === 'number' || t === 'boolean') {
+      if (typeof value === 'number' && !Number.isFinite(value)) {
+        return {
+          number: isNaN(value) ? 'nan' : (value < 0 ? '-inf' : 'inf'),
+        }
+      }
       return value // primitive
     }
     if (t === 'symbol') {
@@ -157,6 +162,13 @@ export class YarosServer {
 
     if ('symbol' in yarosValue) {
       return Symbol.for(yarosValue.symbol);
+    }
+
+    if ('number' in yarosValue) {
+      if (yarosValue.number === 'nan') return NaN;
+      if (yarosValue.number === '-inf') return -Infinity;
+      if (yarosValue.number === 'inf') return Infinity;
+      return Number(yarosValue.number);
     }
 
     if ('remoteId' in yarosValue) {

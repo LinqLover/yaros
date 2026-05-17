@@ -47,7 +47,7 @@ export class YarosServer {
    */
   async remoteObject(remoteName) {
     if (typeof remoteName === 'string') {
-      remoteName = Symbol(remoteName)
+      remoteName = Symbol.for(remoteName)
     }
     return await this.sendMessage({
       type: 'lookup',
@@ -99,7 +99,7 @@ export class YarosServer {
    */
   _getOrMakeIdFor(obj) {
     if (obj === null || obj === undefined) return null
-    if (typeof obj !== 'object' && typeof obj !== 'function') {
+    if (typeof obj !== 'object' && typeof obj !== 'function' && typeof obj !== 'symbol') {
       return null
     }
 
@@ -130,7 +130,7 @@ export class YarosServer {
       }
       return value // primitive
     }
-    if (t === 'symbol') {
+    if (t === 'symbol' && Symbol.keyFor(value)) { // only for global symbols
       return { symbol: value.description }
     }
     

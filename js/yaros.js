@@ -42,7 +42,7 @@ export class YarosServer {
    * identified by `remoteName`.
    *
    * Example usage:
-   *   const smalltalk = await client.remoteObjectProxy("Smalltalk")
+   *   const smalltalk = await client.remoteObject("Smalltalk")
    *   const answer = await smalltalk.imageName()
    */
   async remoteObject(remoteName) {

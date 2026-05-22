@@ -1,0 +1,15 @@
+SmalltalkCISpec {
+	#loading : [
+		SCIMetacelloLoadSpec {
+			#baseline : 'Yaros',
+			#platforms : [ #squeak ]
+		}
+	],
+	#testing : {
+		#packages : [ 'Yaros' ],
+		#coverage : {
+			#packages : [ 'Yaros' ],
+			#format : #coveralls
+		}
+	}
+}

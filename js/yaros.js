@@ -205,6 +205,11 @@ export class YarosServer {
         if (propKey === 'then') {
           return undefined;
         }
+        if (propKey === Symbol.toPrimitive) {
+          return function (hint) {
+            debugger;
+          }
+        }
         if (propKey === Symbol.for('debug.description')) {
           return function () {
             return `Proxy(${id})`

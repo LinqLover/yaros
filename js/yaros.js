@@ -24,8 +24,8 @@ export class YarosServer {
    *   - "lookup" -> find object in globalThis
    *   - "messageSend" -> call method on that object
    */
-  start() {
-    return this.connector.start(data => {
+  async start() {
+    return await this.connector.start(data => {
       let msg
       try {
         msg = JSON.parse(data)
@@ -35,6 +35,10 @@ export class YarosServer {
       }
       this.handleMessage(msg)
     })
+  }
+
+  async stop() {
+    await this.connector.stop()
   }
 
   /**

@@ -2,7 +2,14 @@
   "tasks": {
     "dev": "deno run --watch main.js"
   },
+  "lint": {
+    "exclude": [
+      "main-node.js"
+    ]
+  },
+  "nodeModulesDirDisabled": "auto",
   "imports": {
-    "@std/assert": "jsr:@std/assert@1"
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/cli": "jsr:@std/cli@^1.0.29"
   }
 }

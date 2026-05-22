@@ -19,5 +19,13 @@ See examples on class side of `YarosServer`.
 Install [Deno](https://deno.land/).
 
 ```bash
-deno run --allow-net js/main.js
+(cd js && deno run start)
+```
+
+See [js/README.md](js/README.md) for more details.
+
+For Electron:
+
+```bash
+npx electron main-node.js
 ```

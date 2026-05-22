@@ -1,0 +1,15 @@
+{
+	"category" : "Yaros-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"yaros1",
+		"yaros2" ],
+	"name" : "YarosTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

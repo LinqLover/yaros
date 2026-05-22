@@ -8,3 +8,4 @@ startClientFrom: inputStream
 		addService: '/comm'
 		action: [:request | self runWebSocketFor: request from: inputStream].
 	webServer listenOn: self clientPort.
+	self clientPort = 0 ifTrue: [self clientPort: webServer listenerPort].
